@@ -1,5 +1,5 @@
 #
-# Cookbook Name:: packages
+# Cookbook Name:: protopipe-packages
 # Recipe:: default
 #
 
