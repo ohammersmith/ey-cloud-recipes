@@ -41,3 +41,5 @@
 
 #uncomment to run the exim::auth recipe
 #require_recipe "exim::auth"
+
+require_recipe "nginx_redirects"
