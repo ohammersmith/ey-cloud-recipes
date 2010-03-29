@@ -3,3 +3,8 @@ if ($host ~* www\.(.*)) {
   set $host_without_www $1;
   rewrite ^(.*)$ http://$host_without_www$1 permanent; # $1 contains '/foo', not 'www.mydomain.com/foo'
 }
+
+# if hostname is brac.futuresinc.com, then redirect to pipelinenc.com
+if ($host ~* brac.futuresinc.com) {
+  rewrite ^(.*)$ http://pipelinenc.com$1 permanent; # $1 contains '/foo', not 'www.mydomain.com/foo'
+}
