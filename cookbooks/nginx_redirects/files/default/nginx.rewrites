@@ -1,1 +1,5 @@
-# hi there. i made it in. now do the real work.
+# if hostname starts with www., then redirect to the same w/o www.
+if ($host ~* www\.(.*)) {
+  set $host_without_www $1;
+  rewrite ^(.*)$ http://$host_without_www$1 permanent; # $1 contains '/foo', not 'www.mydomain.com/foo'
+}
