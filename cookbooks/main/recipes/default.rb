@@ -46,3 +46,4 @@ require_recipe "ssmtp"
 #require_recipe "logrotate"
 
 require_recipe "nginx_redirects"
+require_recipe "crontab_mailto"
