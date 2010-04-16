@@ -47,4 +47,4 @@ require_recipe "ssmtp"
 
 require_recipe "nginx_redirects"
 require_recipe "crontab_mailto"
-require_recipe "protopipe_crontabs"
+require_recipe "protopipe_cronjobs"
