@@ -15,10 +15,11 @@ end
 
 # Cron jobs on all app nodes
 if ['solo', 'app_master', 'app'].include?(node[:instance_role])
-  cron "indexing" do
-    minute  '47'
-    hour '0'
-    command "(cd /data/protopipe/current ; rake ts:in RAILS_ENV=#{node[:environment][:framework_env]})"
-    user "deploy"
-  end
+  # Somehow this cron job is already automated, but I can't for the life of me figure out where it is, commenting for now. -OJH
+  # cron "indexing" do
+  #   minute  '47'
+  #   hour '0'
+  #   command "(cd /data/protopipe/current ; rake ts:in RAILS_ENV=#{node[:environment][:framework_env]})"
+  #   user "deploy"
+  # end
 end
